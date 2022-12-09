@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Watch list
+{% endblock %}
+
+{% block main %}
+
+    <form class="list-indices" action="/addfav" method="post">
+        <button type="button" class="list-group-item list-group-item-action" id="assetsbtn" disabled>ALL INSTRUMENTS</button>
+        <button type="submit" name="submitbutton" value="S&P" class="list-group-item list-group-item-action">S&P</button>
+        <button type="submit" name="submitbutton" value="NASDAQ" class="list-group-item list-group-item-action">NASDAQ</button>
+        <button type="submit" name="submitbutton" value="DOW JONES" class="list-group-item list-group-item-action">DOW JONES</button>
+        <button type="submit" name="submitbutton" value="RUSSEL" class="list-group-item list-group-item-action">RUSSEL</button>
+        <button type="submit" name="submitbutton" value="DAX" class="list-group-item list-group-item-action">DAX</button>
+        <button type="submit" name="submitbutton" value="FTSE" class="list-group-item list-group-item-action">FTSE</button>
+        <button type="submit" name="submitbutton" value="FTSEMIB" class="list-group-item list-group-item-action">FTSEMIB</button>
+    </form>
+
+
+    <form class="list-indices">
+        <button type="button" class="list-group-item list-group-item-action" id="assetsbtn" disabled>WATCH LIST</button>
+            {% for favourite in favourites %}
+            <button type="button" class="list-group-item list-group-item-action" id="name">  {{ favourite["name"] }} </button>
+            {% endfor %}
+    </form>
+
+    <form action="/clean" method="post">
+        <button id="mycleanbutton" type="submit"><span></span>Delete list</button>
+    </form>
+
+{% endblock %}

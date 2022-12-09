@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Europe
+{% endblock %}
+
+{% block main %}
+<div>
+    <div class="list-indices" style="float:left">
+    <button type="button" class="list-group-item list-group-item-action" id="assetsbtn" disabled>EUROPE</button>
+    <button onclick="window.location.href='/dax'" class="list-group-item list-group-item-action">DAX</button>
+    <button onclick="window.location.href='/ftse'" class="list-group-item list-group-item-action">FTSE</button>
+    <button onclick="window.location.href='/ftsemib'" class="list-group-item list-group-item-action">FTSEMIB</button>
+    </div>
+
+    <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container" style="float: right; padding-top: 10px; opacity: 0.80">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/economic-calendar/" rel="noopener" target="_blank"><span class="blue-text">Economic Calendar</span></a> by TradingView</div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>
+        {
+        "width": "50%",
+        "height": "600",
+        "colorTheme": "dark",
+        "isTransparent": false,
+        "locale": "en",
+        "importanceFilter": "0,1",
+        "currencyFilter": "EUR,USD"
+    }
+        </script>
+    </div>
+    <!-- TradingView Widget END -->
+
+    <form class="list-indices">
+        <button type="button" class="list-group-item list-group-item-action" id="assetsbtn" disabled>WATCH LIST</button>
+            {% for favourite in favourites %}
+            <button type="button" class="list-group-item list-group-item-action">  {{ favourite["name"] }} </button>
+            {% endfor %}
+    </form>
+
+</div>
+
+{% endblock %}

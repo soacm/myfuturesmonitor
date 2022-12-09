@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Apology
+{% endblock %}
+
+{% block main %}
+    <!-- https://pixahive.com/ -->
+    <img alt="{{ top }}" class="apology img-fluid" style="opacity: 0.80; border-radius: 1rem;" src="http://memegen.link/custom/{{ top | urlencode }}/{{ bottom | urlencode }}.jpg?alt=https://i0.wp.com/pixahive.com/wp-content/uploads/2020/09/Incandescent-light-bulb-on-Dark-Background-48011-pixahive.jpg?fit=778%2C518&ssl=1" title="{{ top }}">
+    <div>
+        <button onclick="window.location.href='/login'" id="mybutton" type="button"><span></span>Go back</button>
+    </div>
+{% endblock %}
+

@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <div class="welcome">
+        <h1> WELCOME BACK {{ user }}! </h1>
+        <p> WE ARE THE WORLD'S <span style="font-weight: 900; color:#009DEB; font-size: 25px;">LEADING</span> FUTURES MARKET MONITORING APP </p>
+    </div>
+
+    <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/" rel="noopener" target="_blank"><span class="blue-text">Markets</span></a> by TradingView</div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+        {
+        "symbols": [
+        {
+            "proName": "FOREXCOM:SPXUSD",
+            "title": "S&P 500"
+        },
+        {
+            "proName": "FOREXCOM:NSXUSD",
+            "title": "US 100"
+        },
+        {
+            "description": "DOW",
+            "proName": "CBOT_MINI:YM1!"
+        },
+        {
+            "description": "DAX",
+            "proName": "EUREX:FDAX1!"
+        },
+        {
+            "description": "FTSE",
+            "proName": "ICEEUR:Z1!"
+        },
+        {
+            "description": "FTSEMIB",
+            "proName": "INDEX:FTSEMIB"
+        }
+        ],
+        "showSymbolLogo": true,
+        "colorTheme": "dark",
+        "isTransparent": true,
+        "displayMode": "adaptive",
+        "locale": "en"
+    }
+        </script>
+    </div>
+    <!-- TradingView Widget END -->
+
+    <footer class="text-center text-muted" style="font-weight: 800" id="footer">
+        AOS &#169;
+    </footer>
+
+{% endblock %}

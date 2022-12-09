@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background: #00002A;
+    background-image: linear-gradient(rgba(0,0,0,0.50), rgba(0,0,0,0.50)), url(sky.jpg);
+    background-size: cover;
+}
+
+.navbar {
+    opacity: 0.80;
+    width: 100%;
+    margin: auto;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0px 30px;
+    position: relative;
+}
+
+.nav-item {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.navbar ul li a {
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Geneva, Tahoma, sans-serif;
+}
+
+.navbar-brand {
+    margin: auto;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 900;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Geneva, Tahoma, sans-serif;
+}
+
+#footer {
+    padding-bottom: 50px;
+    padding-top: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: red;
+}
+
+.welcome {
+    width:100%;
+    padding-top: 5%;
+    text-align: center;
+    color: white;
+}
+
+.welcome h1 {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.welcome p {
+    font-size: 20px;
+}
+
+.tradingview-widget-container {
+    width:100%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+
+}
+
+.list-indices {
+    text-align: center;
+    width: 20%;
+    font-size: 20px;
+    font-weight: 500;
+    padding-top: 5%;
+}
+
+.list-indices button {
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+    background-color: #00002A;
+    opacity: 0.80;
+}
+
+#mybutton {
+    font-size: 10px;
+    width: 100px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 15px 10px;
+    border-radius: 25px;
+    font-weight: 500;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+#mybutton:hover {
+    background-color: #00002A;
+    font-size: 10px;
+    opacity: 0.70;
+}
+
+#assetsbtn {
+    font-weight: 800;
+    font-size: 13px;
+
+}
+
+#mycleanbutton {
+    font-size: 10px;
+    width: 100px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 15px 10px;
+    border-radius: 25px;
+    font-weight: 500;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    right: 40%;
+    overflow: hidden;
+}
+
+#mycleanbutton:hover {
+    background-color: #00002A;
+    opacity: 0.70;
