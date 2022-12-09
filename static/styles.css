@@ -110,7 +110,7 @@ body {
 #mybutton:hover {
     background-color: #00002A;
     font-size: 10px;
-    opacity: 0.70;
+    opacity: 0.80;
 }
 
 #assetsbtn {
@@ -138,4 +138,4 @@ body {
 
 #mycleanbutton:hover {
     background-color: #00002A;
-    opacity: 0.70;
+    opacity: 0.80;
