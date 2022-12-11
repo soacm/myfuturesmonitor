@@ -27,6 +27,7 @@ Session(app)
 
 #db = SQL("sqlite:///project.db")
 
+# pgloader --no-ssl-cert-verification finance.db postgresql://postgres:j75a7MlcS1eRlGeTICMz@containers-us-west-145.railway.app:7591/railway?sslmode=allow
 uri = os.getenv("DATABASE_URL")
 if uri.startswith("postgres://"):
     uri = uri.replace("postgres://", "postgresql://")
