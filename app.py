@@ -25,12 +25,7 @@ Session(app)
 
 # Use SQLite database
 
-#db = SQL("sqlite:///project.db")
-
-uri = os.getenv("DATABASE_URL")
-if uri.startswith("postgres://"):
-    uri = uri.replace("postgres://", "postgresql://")
-db = SQL(uri)
+db = SQL("sqlite:///project.db")
 
 @app.after_request
 def after_request(response):
