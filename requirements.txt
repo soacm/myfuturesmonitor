@@ -4,3 +4,5 @@ Flask-Session
 gunicorn
 psycopg2
 requests
+
+# pgloader --no-ssl-cert-verification project.db postgresql://postgres:j75a7MlcS1eRlGeTICMz@containers-us-west-145.railway.app:7591/railway?sslmode=allow
